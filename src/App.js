@@ -6,8 +6,7 @@ import {
   signInWithEmailAndPassword, 
   signOut, 
   onAuthStateChanged
-} from "firebase/auth"
-
+} from "firebase/auth";
 import 'Logo' from '../assets/Logo.svg';
 
 function App() {
@@ -17,12 +16,15 @@ function App() {
   React.useEffect(() => { 
     onAuthStateChanged(auth, (user) => {
       setLoading(false);
-      console.log(user.email[0].toUpperCase());
+      if (user) {
+        console.log(user.email[0].toUpperCase());
+      }
       if (user) {
         setUser(user)
       }
     })
   }, []);
+  
   function register() {
     console.log('register');
     createUserWithEmailAndPassword(auth, 'email@email.com', 'test123')
@@ -57,7 +59,7 @@ function App() {
     <div className='nav__container'>
     <div className="App">
     <button className='btn' onClick={register}>Register</button>
-    <button className='btn__login' onClick={login}>Login</button>
+    {loading ? 'loading...' : user?.email}
     <button className='btn' onClick={logout}>Logout</button>
     {loading ? 'loading...' : user.email}
     </div>
