@@ -7,7 +7,7 @@ import {
   signOut, 
   onAuthStateChanged
 } from "firebase/auth";
-import 'Logo' from '../assets/Logo.svg';
+import Logo from '../assets/Logo.svg';
 
 function App() {
   const [user, setUser] = React.useState({});
@@ -61,7 +61,7 @@ function App() {
     <button className='btn' onClick={register}>Register</button>
     {loading ? 'loading...' : user?.email}
     <button className='btn' onClick={logout}>Logout</button>
-    {loading ? 'loading...' : user.email}
+    {loading ? 'loading...' : user?.email}
     </div>
     </div>
   );
