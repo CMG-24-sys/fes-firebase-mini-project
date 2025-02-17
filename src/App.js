@@ -7,7 +7,7 @@ import {
   signOut, 
   onAuthStateChanged
 } from "firebase/auth";
-import Logo from '/Logo.svg'
+import Logo from './logo.svg'
 
 
 function App() {
