@@ -18,12 +18,8 @@ function App() {
     onAuthStateChanged(auth, (user) => {
       setLoading(false);
       //to create circle icon with user's email initial//
-      console.log(user.email[0].toUpperCase());
-      
       if (user) {
         console.log(user.email[0].toUpperCase());
-      }
-      if (user) {
         setUser(user)
       }
     })
