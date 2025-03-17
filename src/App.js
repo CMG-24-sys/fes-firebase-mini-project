@@ -7,7 +7,7 @@ import {
   signOut, 
   onAuthStateChanged
 } from "firebase/auth";
-import Logo from './logo.svg'
+import Logo from './Logo.png'
 
 
 function App() {
@@ -17,6 +17,9 @@ function App() {
   React.useEffect(() => { 
     onAuthStateChanged(auth, (user) => {
       setLoading(false);
+      //to create circle icon with user's email initial//
+      console.log(user.email[0].toUpperCase());
+      
       if (user) {
         console.log(user.email[0].toUpperCase());
       }
@@ -59,6 +62,7 @@ function App() {
   return (
     <div className='nav__container'>
     <div className="App">
+    <img className='logo' src={Logo} alt="" />
     <button className='btn' onClick={register}>Register</button>
     {loading ? 'loading...' : user?.email}
     <button className='btn' onClick={logout}>Logout</button>

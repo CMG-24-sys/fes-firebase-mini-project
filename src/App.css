@@ -22,3 +22,18 @@
   display: flex;
   padding-left: 70%;
 }
+
+.logo {
+  width: 50%;
+  padding-right: 50%;
+}
+
+/* SKELETON */
+.skeleton {
+  background-color: #e0e0e0;
+  height: 20px;
+  margin: 10px 0;
+  border-radius: 4px;
+  width: 100%;
+  animation: loading 1.5s infinite;
+}
