@@ -61,6 +61,7 @@ function App() {
     <img className='logo' src={Logo} alt="" />
     <button className='btn' onClick={register}>Register</button>
     {loading ? 'loading...' : user?.email}
+    <button className='btn' onClick={login}>Login</button>
     <button className='btn' onClick={logout}>Logout</button>
     </div>
     </div>
