@@ -24,8 +24,10 @@
 }
 
 .logo {
-  width: 50%;
+  width: 60%;
   padding-right: 50%;
+  display: flex;
+  padding-bottom: 5%;
 }
 
 /* SKELETON */
